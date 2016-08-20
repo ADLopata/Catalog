@@ -1,0 +1,33 @@
+﻿@model Сatalog.Models.Car
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Car</legend>
+
+    <div class="display-label">carName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.carName)
+    </div>
+
+    <div class="display-label">descriptioncar</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.descriptioncar)
+    </div>
+
+    <div class="display-label">priceCar</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.priceCar)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

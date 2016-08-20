@@ -1,0 +1,30 @@
+﻿@model Сatalog.Models.Car
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Car</legend>
+
+    <div class="display-label">carName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.carName)
+    </div>
+
+    <div class="display-label">descriptioncar</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.descriptioncar)
+    </div>
+
+    <div class="display-label">priceCar</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.priceCar)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.CarId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
